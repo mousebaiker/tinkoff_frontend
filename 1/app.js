@@ -11,7 +11,7 @@ function check(first_sorted, second_sorted) {
       return;
     }
   }
-  if (first_string.length===second_string.lenght){
+  if (first_string.length===second_string.length){
     alert("Strings are anagrams.");
   }
   else {
