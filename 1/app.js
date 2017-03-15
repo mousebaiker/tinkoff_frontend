@@ -3,10 +3,18 @@ var second_string=prompt('Enter second string').toLowerCase();
 
 var first_sorted = first_string.split("").sort();
 var second_sorted = second_string.split("").sort();
-
-if (first_string===second_string){
-  alert("Strings are anagrams.");
-}
-else {
-  alert("Strings are not anagrams.");
+check(first_sorted, second_sorted);
+function check(first_sorted, second_sorted) {
+  for (var i = 0; i < first_sorted.length; ++i) {
+    if (first_sorted[i] != second_sorted[i]) {
+        alert("Strings are not anagrams.");
+      return;
+    }
+  }
+  if (first_string.length===second_string.length){
+    alert("Strings are anagrams.");
+  }
+  else {
+    alert("Strings are not anagrams.");
+  }
 }
